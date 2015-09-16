@@ -9,15 +9,14 @@ package tdgame;
  *
  * @author lehar
  */
-public class TDGame {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        // Sup dude
-        //yolo
-    }
+public class Enemy {
+    public int health;
+    public String path;
+    public int damage;
+    public int intervals;
+    public int intervalCounter;
     
+            
+            
+            
 }
