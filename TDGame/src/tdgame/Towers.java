@@ -10,5 +10,7 @@ package tdgame;
  * @author lehar
  */
 public class Towers {
-    
+    public String shooting;
+    public int strength;
+    public int range;
 }
