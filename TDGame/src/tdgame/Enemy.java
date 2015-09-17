@@ -5,6 +5,8 @@
  */
 package tdgame;
 
+import static javax.swing.UIManager.get;
+
 /**
  *
  * @author lehar
@@ -18,6 +20,8 @@ public class Enemy {
     
     public int getenemyheath()
     {
+       
+        
         return health;
     }
             
