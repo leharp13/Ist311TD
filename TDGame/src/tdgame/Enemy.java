@@ -16,7 +16,19 @@ public class Enemy {
     public int intervals;
     public int intervalCounter;
     
+    public int getenemyheath()
+    {
+        return health;
+    }
             
-            
+    public String getpath()
+    {
+        return path;
+    }        
+    
+    public int getdamage()
+    {
+        return damage;
+    }
             
 }

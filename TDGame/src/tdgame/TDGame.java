@@ -17,6 +17,7 @@ public class TDGame {
     public static void main(String[] args) {
        menuView menu = new menuView();
        menu.setVisible(true);
+      
     }
     
 }
