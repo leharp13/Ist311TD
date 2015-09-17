@@ -10,10 +10,10 @@ import javax.swing.*;
 //jake semple
 
 public class menuView extends JFrame{
-    private JButton easy = new JButton();
-    private JButton medium = new JButton();
-    private JButton hard = new JButton();
-    private JTextField input = new JTextField("");
+    private JButton easy = new JButton("Easy");
+    private JButton medium = new JButton("Medium");
+    private JButton hard = new JButton("Hard");
+    private JTextField input = new JTextField(10);
     private JLabel scores = new JLabel();
     private JLabel instructions = new JLabel();
     private JLabel enterName = new JLabel();
