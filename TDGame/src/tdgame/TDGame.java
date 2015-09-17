@@ -15,9 +15,8 @@ public class TDGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        // Sup dude
-        //yolo
+       menuView menu = new menuView();
+       menu.setVisible(true);
     }
     
 }
