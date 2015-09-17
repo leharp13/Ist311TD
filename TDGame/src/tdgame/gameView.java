@@ -17,8 +17,30 @@ public class gameView extends JFrame{
     private Enemy enemies = new Enemy();
     private Towers towers = new Towers();
     
-    private JButton nextWaveButton = new JButton();
-    private JButton homeWorkButton = new JButton();
-    private JButton eraserButton = new JButton();
-    private JButton footballButton = new JButton();
+    private JButton nextWaveButton = new JButton("Next");
+    private JButton homeWorkButton = new JButton(" HW ");
+    private JButton eraserButton = new JButton("ERASER");
+    private JButton footballButton = new JButton("FOOTBALL");
+    private JLabel playerName = new JLabel("Name");
+    private JLabel playerHealth = new JLabel("Health");
+    private JLabel playerScore = new JLabel("Score");
+    private JLabel playerMoney = new JLabel("Money");
+    private JLabel difficulty = new JLabel("Difficulty");
+    private JLabel stageLabel = new JLabel("Stage");
+    private JLabel hwTitle = new JLabel("Homework Tosser");
+    private JLabel hwStats = new JLabel("Homework Tosser Stats");
+    private JLabel eraseTitle = new JLabel("Eraser Cannon");
+    private JLabel eraseStats = new JLabel("Eraser Cannon Stats");
+    private JLabel footballTitle = new JLabel("FootBall Cannon");
+    private JLabel footballStats = new JLabel("FootBall Cannon Stats");
+    
+    private final int WIDTH = 800;
+    private final int HEIGHT = 800;
+
+        gameView(){
+            JPanel gamePanel = new JPanel();
+            JPanel gameSidePanel = new JPanel();
+            
+            
+        }
 }
