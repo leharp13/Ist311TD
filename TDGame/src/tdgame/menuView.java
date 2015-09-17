@@ -22,11 +22,27 @@ public class menuView extends JFrame{
     private JLabel hardL = new JLabel();
     private JLabel enterL = new JLabel();
     
-    
+    private final int WIDTH = 800;
+    private final int HEIGHT = 800;
     
     menuView(){
         JPanel thePanel = new JPanel();
         
+        this.setSize(WIDTH, HEIGHT);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
+        thePanel.add(easy);
+        thePanel.add(medium);
+        thePanel.add(hard);
+        thePanel.add(input);
+        thePanel.add(scores);
+        thePanel.add(instructions);
+        thePanel.add(enterName);
+        thePanel.add(easyL);
+        thePanel.add(mediumL);
+        thePanel.add(hardL);
+        thePanel.add(enterL);
+        
+        this.add(thePanel);
     }
 }
