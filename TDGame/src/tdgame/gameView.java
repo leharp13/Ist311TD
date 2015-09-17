@@ -41,6 +41,32 @@ public class gameView extends JFrame{
             JPanel gamePanel = new JPanel();
             JPanel gameSidePanel = new JPanel();
             
+            this.setSize(WIDTH, HEIGHT);
+            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             
+            gamePanel.add(title);
+            gamePanel.add(takenTile);
+            //gamePanel.add(enemies);
+            //gamePanel.add(towers);
+            
+            gameSidePanel.add(nextWaveButton);
+            gameSidePanel.add(homeWorkButton);
+            gameSidePanel.add(eraserButton);
+            gameSidePanel.add(footballButton);
+            gameSidePanel.add(playerName);
+            gameSidePanel.add(playerHealth);
+            gameSidePanel.add(playerScore);
+            gameSidePanel.add(playerMoney);
+            gameSidePanel.add(difficulty);
+            gameSidePanel.add(stageLabel);
+            gameSidePanel.add(hwTitle);
+            gameSidePanel.add(hwStats);
+            gameSidePanel.add(eraseTitle);
+            gameSidePanel.add(eraseStats);
+            gameSidePanel.add(footballTitle);
+            gameSidePanel.add(footballStats);
+            
+            this.add(gamePanel);
+            this.add(gameSidePanel);
         }
 }
