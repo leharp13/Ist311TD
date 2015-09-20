@@ -14,9 +14,13 @@ public class TDGame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-       menuView menu = new menuView();
-       menu.setVisible(true);
+   public static void main(String[] args) {
+      // menuView menu = new menuView();
+       //menu.setVisible(true);
+       
+       gameView game = new gameView();
+       game.setVisible(true);
+       
       
     }
     
