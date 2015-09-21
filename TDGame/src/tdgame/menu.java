@@ -14,16 +14,19 @@ public class menu {
     
     
     
-    public String getEasy()
+    public void startEasy()
     {
-        return easy;
+        System.out.println("easy game starts");
     }
     
-    public String getmedium()
+    public void startMedium()
     {
-        return medium;
+        System.out.println("medium game starts");
     }
-            
+    public void startHard()
+    {
+        System.out.println("hard game starts");
+    }         
             
           
 }
