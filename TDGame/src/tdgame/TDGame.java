@@ -15,11 +15,13 @@ public class TDGame {
      * @param args the command line arguments
      */
    public static void main(String[] args) {
-      // menuView menu = new menuView();
-       //menu.setVisible(true);
+       myJFrame menu = new myJFrame();
+       menu theMenu = new menu();
+       menuController cont = new menuController(menu, theMenu);
+       menu.setVisible(true);
        
-       gameView game = new gameView();
-       game.setVisible(true);
+//       gameView game = new gameView();
+//       game.setVisible(true);
        
       
     }
