@@ -38,6 +38,7 @@ public class gameView extends JFrame{
     private final int HEIGHT = 800;
 
         gameView(){
+            setTitle("Welcome");
             JPanel gamePanel = new JPanel();
             JPanel gameSidePanel = new JPanel();
             
