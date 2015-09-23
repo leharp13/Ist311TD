@@ -70,7 +70,7 @@ class mainJPanel extends JPanel{
 
      try{
          String content = "List of High scores.";
-         File file = new File("//up.ist.local/Users/sab5964/Desktop/TDGameHighScore.txt");
+         File file = new File("TDGameHighScore.txt");
          //if the file doesnt exist , then create it
          if(!file.exists())
          {
