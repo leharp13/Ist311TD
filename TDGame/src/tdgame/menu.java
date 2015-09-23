@@ -4,6 +4,8 @@
 
 package tdgame;
 
+import java.awt.BorderLayout;
+
 public class menu {
     public String easy = "easy";
     public String medium = "medium";
@@ -11,12 +13,13 @@ public class menu {
     public String getinstr = "instructions";
     public String getname = "name";
     public String getHigh = "high score";
-    
+    gamePanel new_game = new gamePanel();
     
     
     public void startEasy()
     {
         System.out.println("easy game starts");
+        
     }
     
     public void startMedium()

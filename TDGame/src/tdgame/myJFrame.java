@@ -8,7 +8,7 @@ package tdgame;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseListener;
+
 
 import javax.swing.*;
 
@@ -18,7 +18,8 @@ public final class myJFrame extends JFrame{
 
 public static final int HEIGHT = 600;
 public static final int WIDTH = 800;
-mainJPanel first = new mainJPanel();  
+mainJPanel first = new mainJPanel(); 
+gamePanel new_game = new gamePanel();
 
     
     myJFrame(){
@@ -35,13 +36,10 @@ mainJPanel first = new mainJPanel();
     
     public void init(){
     setLayout(new BorderLayout());
-    
-    
     this.add(first, BorderLayout.CENTER);
-
     setVisible(true);
-    
 }
+    
     public void easyGameListener(ActionListener listener){
         first.easy.addActionListener(listener);
     }
