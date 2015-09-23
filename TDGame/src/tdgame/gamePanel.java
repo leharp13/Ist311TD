@@ -12,7 +12,7 @@ import javax.swing.*;
  *
  * @author jakesemple
  */
- class gamePanel extends JPanel implements Runnable{
+ class gamePanel extends JPanel  {
              
     private JButton tile = new JButton();
     private JButton takenTile = new JButton();
