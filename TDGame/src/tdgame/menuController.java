@@ -26,8 +26,7 @@ public class menuController {
     
     class startGameListener implements ActionListener{
         private String action;
-        gameView new_game = new gameView();
-        
+
             public startGameListener(String action)
             {
                 this.action = action.toLowerCase();
@@ -43,7 +42,7 @@ public class menuController {
                         System.out.println("easy picked");
                         
                         
-                        new_game.setVisible(true);
+                        
                         
                         
                     }
