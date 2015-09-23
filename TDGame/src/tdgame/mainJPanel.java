@@ -46,7 +46,7 @@ class mainJPanel extends JPanel{
         bottomPanel.setLayout(new BoxLayout(bottomPanel, BoxLayout.X_AXIS));
         
         bottomPanel.setBackground(Color.lightGray);
-        bottomPanel.setBackground(Color.lightGray);
+      //  bottomPanel.setBackground(Color.lightGray);
 
        
         createTextArea();
@@ -72,8 +72,8 @@ class mainJPanel extends JPanel{
     public void createTextArea(){
         instructionArea.setEditable(false);
         instructionArea.setSize(5, 5);
-        instructionArea.setText("Welcome, \nSelect a level of difficulty to begin. \n"
-                + "Remaining instructions go here");
+        instructionArea.setText("Welcome , \nSelect a level of difficulty to begin. \n"
+                + "In this game you will place towers and destroy the enemies");
         
         scores.setEditable(false);
         scores.setSize(5, 5);
