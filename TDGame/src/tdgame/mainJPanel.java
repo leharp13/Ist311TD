@@ -19,7 +19,7 @@ import javax.swing.JTextField;
  */
 
 
-public class mainJPanel extends JPanel{
+class mainJPanel extends JPanel{
     public JButton easy = new JButton("Easy");
     public JButton medium = new JButton("Medium");
     public JButton hard = new JButton("Hard");
@@ -38,7 +38,6 @@ public class mainJPanel extends JPanel{
     mainJPanel(){
         setPreferredSize(new Dimension(800,600));
         JPanel topPanel = new JPanel();
-//        JPanel buttonPanel = new JPanel(new GridLayout(2,2));
         JPanel bottomPanel = new JPanel();
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -93,6 +92,7 @@ public class mainJPanel extends JPanel{
     public void hardGameMListener(ActionListener listener){
         hard.addActionListener(listener);
     }
+   
     
     
 }
