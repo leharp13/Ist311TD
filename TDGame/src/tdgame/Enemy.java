@@ -19,9 +19,7 @@ public class Enemy {
     public int intervalCounter;
     
     public int getenemyheath()
-    {
-       
-        
+    {  
         return health;
     }
             
