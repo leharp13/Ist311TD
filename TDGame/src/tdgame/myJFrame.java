@@ -19,7 +19,7 @@ public final class myJFrame extends JFrame{
 public static final int HEIGHT = 600;
 public static final int WIDTH = 800;
 mainJPanel first = new mainJPanel(); 
-gameView new_game = new gameView();
+gamePanel new_game = new gamePanel();
 
     
     myJFrame(){
