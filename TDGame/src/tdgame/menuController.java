@@ -1,6 +1,7 @@
 
 package tdgame;
 
+import java.awt.BorderLayout;
 import java.awt.event.*;
 import java.util.*;
 
@@ -12,6 +13,7 @@ import java.util.*;
 public class menuController {
     private myJFrame theView;
     private menu theMenu;
+
     
     public menuController(myJFrame theView, menu theMenu){
         this.theView = theView;
@@ -24,6 +26,8 @@ public class menuController {
     
     class startGameListener implements ActionListener{
         private String action;
+        gameView new_game = new gameView();
+        
             public startGameListener(String action)
             {
                 this.action = action.toLowerCase();
@@ -37,6 +41,11 @@ public class menuController {
                     if (action.equals("easy")){
                         theMenu.startEasy();
                         System.out.println("easy picked");
+                        
+                        
+                        new_game.setVisible(true);
+                        
+                        
                     }
                     if (action.equals("medium")){
                         theMenu.startMedium();
@@ -52,4 +61,6 @@ public class menuController {
             }
     }
 }
+    
+    
 }
