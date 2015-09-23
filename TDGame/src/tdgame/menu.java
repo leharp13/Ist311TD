@@ -13,7 +13,7 @@ public class menu {
     public String getinstr = "instructions";
     public String getname = "name";
     public String getHigh = "high score";
-    gameView new_game = new gameView();
+    gamePanel new_game = new gamePanel();
     
     
     public void startEasy()
