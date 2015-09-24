@@ -12,10 +12,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-//stuff for reading a writing the high score
+//stuff for writing the high score to a txt file
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
+//stuff for reading the high score list from a txt file
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
 /**
@@ -38,6 +42,7 @@ class mainJPanel extends JPanel{
     private JLabel mediumL = new JLabel("Medium");
     private JLabel hardL = new JLabel("Hard");
     private JLabel enterL = new JLabel("Enter");
+   
     
     
     mainJPanel(){
@@ -67,25 +72,35 @@ class mainJPanel extends JPanel{
         bottomPanel.add(medium);
 //        buttonPanel.add(hardL);
         bottomPanel.add(hard);
-
+        //*********************************** this code will read and write the high scores
+BufferedReader br = null;
+String highscorelist = "List of High scores.\n";
+String HighScoresList = ""; 
      try{
-         String content = "List of High scores.";
-         File file = new File("//up.ist.local/Users/sab5964/Desktop/TDGameHighScore.txt");
+         
+         File file = new File("TDGameHighScore.txt");
          //if the file doesnt exist , then create it
          if(!file.exists())
          {
              file.createNewFile();
          }
        
+         while ((highscorelist = br.readLine()) != null) 
+         {
+             HighScoresList =  highscorelist + "/n";// this will need to be sorted before it is output
+         }		
+         
         FileWriter fw = new FileWriter(file.getAbsoluteFile());
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(content);
+        br =  new BufferedReader(new FileReader("TDGameHighScore.txt"));
+        bw.write(highscorelist);
+   
 	bw.close();
      } catch (IOException e)
      {
          e.printStackTrace();  
      }
-
+//************************************************ this code will read and write high scores
 //        topPanel.add(namePanel);
         topPanel.add(bottomPanel);
         this.add(topPanel);
@@ -113,10 +128,7 @@ class mainJPanel extends JPanel{
     public String getName(){
         return enterName.getText();
     }
-   // if (enterName = "Default Name...")
-  //  {
-        
-   // }
+
     public void easyGameMListener(MouseListener listener){
         easy.addMouseListener(listener);
     }
