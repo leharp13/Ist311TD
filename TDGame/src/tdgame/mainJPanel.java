@@ -73,33 +73,33 @@ class mainJPanel extends JPanel{
 //        buttonPanel.add(hardL);
         bottomPanel.add(hard);
         //*********************************** this code will read and write the high scores
-BufferedReader br = null;
-String highscorelist = "List of High scores.\n";
-String HighScoresList = ""; 
-     try{
-         
-         File file = new File("TDGameHighScore.txt");
-         //if the file doesnt exist , then create it
-         if(!file.exists())
-         {
-             file.createNewFile();
-         }
-       
-         while ((highscorelist = br.readLine()) != null) 
-         {
-             HighScoresList =  highscorelist + "/n";// this will need to be sorted before it is output
-         }		
-         
-        FileWriter fw = new FileWriter(file.getAbsoluteFile());
-        BufferedWriter bw = new BufferedWriter(fw);
-        br =  new BufferedReader(new FileReader("TDGameHighScore.txt"));
-        bw.write(highscorelist);
-   
-	bw.close();
-     } catch (IOException e)
-     {
-         e.printStackTrace();  
-     }
+//BufferedReader br = null;
+//String highscorelist = "List of High scores.\n";
+//String HighScoresList = ""; 
+//     try{
+//         
+//         File file = new File("TDGameHighScore.txt");
+//         //if the file doesnt exist , then create it
+//         if(!file.exists())
+//         {
+//             file.createNewFile();
+//         }
+//       
+//         while ((highscorelist = br.readLine()) != null) 
+//         {
+//             HighScoresList =  highscorelist + "/n";// this will need to be sorted before it is output
+//         }		
+//         
+//        FileWriter fw = new FileWriter(file.getAbsoluteFile());
+//        BufferedWriter bw = new BufferedWriter(fw);
+//        br =  new BufferedReader(new FileReader("TDGameHighScore.txt"));
+//        bw.write(highscorelist);
+//   
+//	bw.close();
+//     } catch (IOException e)
+//     {
+//         e.printStackTrace();  
+//     }
 //************************************************ this code will read and write high scores
 //        topPanel.add(namePanel);
         topPanel.add(bottomPanel);

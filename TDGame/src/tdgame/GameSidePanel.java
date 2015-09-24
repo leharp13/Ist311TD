@@ -43,15 +43,18 @@ import javax.swing.*;
             JPanel gameSidePanel = new JPanel();
             JPanel topPanel = new JPanel();
             JPanel eraserPanel = new JPanel();
+            JPanel footballPanel = new JPanel();
+            JPanel homeworkPanel = new JPanel();
             
             this.setSize(200, myJFrame.HEIGHT);
 
+            topPanel.add(playerName);
+            topPanel.add(playerHealth);
             gameSidePanel.add(nextWaveButton);
             gameSidePanel.add(homeWorkButton);
             gameSidePanel.add(eraserButton);
             gameSidePanel.add(footballButton);
-            gameSidePanel.add(playerName);
-            gameSidePanel.add(playerHealth);
+
             gameSidePanel.add(playerScore);
             gameSidePanel.add(playerMoney);
             gameSidePanel.add(difficulty);
