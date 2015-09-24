@@ -14,6 +14,8 @@ public class Towers {
     public int strength;
     public int range;
     
+    
+    
 public String getshooting()
     {
         return shooting;
