@@ -20,6 +20,7 @@ public static final int HEIGHT = 600;
 public static final int WIDTH = 800;
 mainJPanel first = new mainJPanel(); 
 gamePanel new_game = new gamePanel();
+GameSidePanel side = new GameSidePanel();
 
     
     myJFrame(){
@@ -39,6 +40,14 @@ gamePanel new_game = new gamePanel();
     this.add(first, BorderLayout.CENTER);
     setVisible(true);
 }
+    public void switchView(){
+    setLayout(new BorderLayout());
+    this.add(new_game, BorderLayout.CENTER);
+    this.add(side, BorderLayout.PAGE_END);
+    first.setVisible(false);
+    new_game.setVisible(true);
+    side.setVisible(true);
+    }
     
     public void easyGameListener(ActionListener listener){
         first.easy.addActionListener(listener);

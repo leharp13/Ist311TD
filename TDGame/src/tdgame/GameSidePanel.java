@@ -41,8 +41,9 @@ import javax.swing.*;
             
             
             JPanel gameSidePanel = new JPanel();
+            JPanel topPanel = new JPanel();
             
-            this.setSize(myJFrame.WIDTH, myJFrame.HEIGHT);
+            this.setSize(200, myJFrame.HEIGHT);
 
             gameSidePanel.add(nextWaveButton);
             gameSidePanel.add(homeWorkButton);
@@ -60,6 +61,7 @@ import javax.swing.*;
             gameSidePanel.add(eraseStats);
             gameSidePanel.add(footballTitle);
             gameSidePanel.add(footballStats);
+            
             
             this.add(gameSidePanel);
             
