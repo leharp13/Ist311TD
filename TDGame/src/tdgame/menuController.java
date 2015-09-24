@@ -40,19 +40,19 @@ public class menuController {
                     if (action.equals("easy")){
                         theMenu.startEasy();
                         System.out.println("easy picked");
-                        
-                        
-                        
-                        
-                        
+                        theView.switchView();                        
                     }
+                    
                     if (action.equals("medium")){
                         theMenu.startMedium();
                         System.out.println("medium picked");
+                        theView.switchView();   
+                        
                     }
                     if (action.equals("hard")){
                         theMenu.startHard();
                         System.out.println("hard picked");
+                        theView.switchView();   
                     }
                 }
                 catch(NumberFormatException ex){
