@@ -42,6 +42,7 @@ import javax.swing.*;
             
             JPanel gameSidePanel = new JPanel();
             JPanel topPanel = new JPanel();
+            JPanel eraserPanel = new JPanel();
             
             this.setSize(200, myJFrame.HEIGHT);
 
