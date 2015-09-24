@@ -13,7 +13,7 @@ import javax.swing.*;
  * @author jakesemple
  */
  class gamePanel extends JPanel  {
-             
+  //  private Image backgroundImage;         
     private JButton tile = new JButton();
     private JButton takenTile = new JButton();
     private Enemy enemies = new Enemy();
@@ -28,7 +28,13 @@ import javax.swing.*;
             JPanel gameSidePanel = new JPanel();
             
             this.setSize(WIDTH, HEIGHT);
-
+//for(int x = 0; x<10;x++)
+//{
+//    for(int y = 0; y<10; y++){
+//    g.drawRect(50 + (y* 50) , 50 + (y *50) , 50,50);
+//    }
+//}
+    
             
             
             //gamePanel.add(enemies);
