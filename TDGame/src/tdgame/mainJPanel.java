@@ -76,7 +76,7 @@ class mainJPanel extends JPanel{
          {
              file.createNewFile();
          }
-       
+      
         FileWriter fw = new FileWriter(file.getAbsoluteFile());
         BufferedWriter bw = new BufferedWriter(fw);
         bw.write(content);
