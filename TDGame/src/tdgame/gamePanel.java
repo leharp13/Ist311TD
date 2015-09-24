@@ -12,9 +12,9 @@ import javax.swing.*;
  *
  * @author jakesemple
  */
- class gamePanel extends JPanel  {
+ class gamePanel extends JPanel implements Runnable {
              
-    private JButton tile = new JButton();
+    private JButton tile = new JButton("test");
     private JButton takenTile = new JButton();
     private Enemy enemies = new Enemy();
     private Towers towers = new Towers();
@@ -25,11 +25,11 @@ import javax.swing.*;
             
             
             
-            JPanel gameSidePanel = new JPanel();
+            
             
             this.setSize(WIDTH, HEIGHT);
 
-            
+            add(tile);
             
             //gamePanel.add(enemies);
             //gamePanel.add(towers);
@@ -37,7 +37,10 @@ import javax.swing.*;
             
             
             this.add(gamePanel);
-            this.add(gameSidePanel);
+            
+            
+        }
+        public void run(){
             
         }
        
