@@ -84,16 +84,15 @@ String HighScoresList = "";
          {
              file.createNewFile();
          }
-       
+               FileWriter fw = new FileWriter(file.getAbsoluteFile());
+        BufferedWriter bw = new BufferedWriter(fw);
+        br =  new BufferedReader(new FileReader("TDGameHighScore.txt"));
+        bw.write(highscorelist);
          while ((highscorelist = br.readLine()) != null) 
          {
              HighScoresList =  highscorelist + "/n";// this will need to be sorted before it is output
          }		
-         
-        FileWriter fw = new FileWriter(file.getAbsoluteFile());
-        BufferedWriter bw = new BufferedWriter(fw);
-        br =  new BufferedReader(new FileReader("TDGameHighScore.txt"));
-        bw.write(highscorelist);
+
    
 	bw.close();
      } catch (IOException e)
