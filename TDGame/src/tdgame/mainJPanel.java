@@ -12,6 +12,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+//stuff for reading a writing the high score
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  *
@@ -23,7 +28,7 @@ class mainJPanel extends JPanel{
     public JButton easy = new JButton("Easy");
     public JButton medium = new JButton("Medium");
     public JButton hard = new JButton("Hard");
-    private JTextField input = new JTextField("Default Name...", 10);
+    private JTextField input = new JTextField("Default Name", 10);
     private JLabel scoreLabel = new JLabel("Scores");
     private JTextArea scores = new JTextArea();
     private JLabel instructions = new JLabel("Instructions");
@@ -54,15 +59,32 @@ class mainJPanel extends JPanel{
         add(instructionArea);
         add(scoreLabel);
         add(scores);
-        
+        bottomPanel.add(enterName);
+             bottomPanel.add(input);
 //        buttonPanel.add(easyL);
         bottomPanel.add(easy);
 //        buttonPanel.add(mediumL);
         bottomPanel.add(medium);
 //        buttonPanel.add(hardL);
         bottomPanel.add(hard);
-        bottomPanel.add(enterName);
-        bottomPanel.add(input);
+
+     try{
+         String content = "List of High scores.";
+         File file = new File("TDGameHighScore.txt");
+         //if the file doesnt exist , then create it
+         if(!file.exists())
+         {
+             file.createNewFile();
+         }
+       
+        FileWriter fw = new FileWriter(file.getAbsoluteFile());
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(content);
+	bw.close();
+     } catch (IOException e)
+     {
+         e.printStackTrace();  
+     }
 
 //        topPanel.add(namePanel);
         topPanel.add(bottomPanel);
@@ -72,17 +94,29 @@ class mainJPanel extends JPanel{
     public void createTextArea(){
         instructionArea.setEditable(false);
         instructionArea.setSize(5, 5);
-        instructionArea.setText("Welcome , \nSelect a level of difficulty to begin. \n"
-                + "In this game you will place towers and destroy the enemies");
+        instructionArea.setText("Welcome , \nSelect a level of difficulty and a name to begin. \n\n"
+                + " help! help! State College is under attack please help us defend it from the asterisks.\n"
+                + "In this game you will place towers and destroy the enemies.\n"
+                + "You will have 100 lives and 100 coins to purchase defences.\n"
+                + "Each enimy will provide you with coins to help defeat stronger enemies.\n"
+                + "I hope that you will accept this challenge and save our beloved town.");
         
         scores.setEditable(false);
         scores.setSize(5, 5);
         scores.setText("High Scores will go here");
+        //scores.setText()
     }
-    
+       
+ 
+           
+           
     public String getName(){
         return enterName.getText();
     }
+   // if (enterName = "Default Name...")
+  //  {
+        
+   // }
     public void easyGameMListener(MouseListener listener){
         easy.addMouseListener(listener);
     }
