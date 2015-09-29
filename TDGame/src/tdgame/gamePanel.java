@@ -12,7 +12,7 @@ import javax.swing.*;
  *
  * @author jakesemple
  */
- class gamePanel extends JPanel implements Runnable {
+ class gamePanel extends JPanel {
              
     private JButton tile = new JButton("test");
     private JButton takenTile = new JButton();
@@ -21,34 +21,41 @@ import javax.swing.*;
     
     JPanel gamePanel = new JPanel();
 
-        gamePanel(){
+
+//            timer t1;
             
             
+
+    public gamePanel() {
+       
+
+       
+    }
+
+ }
             
-            
-            
-            this.setSize(WIDTH, HEIGHT);
+           
 //for(int x = 0; x<10;x++)
 //{
 //    for(int y = 0; y<10; y++){
 //    g.drawRect(50 + (y* 50) , 50 + (y *50) , 50,50);
 //    }
 //}
-    
-            
-            
-            //gamePanel.add(enemies);
-            //gamePanel.add(towers);
-            
-            
-            
-            this.add(gamePanel);
-            
-            
-        }
-        public void run(){
-            
-        }
-       
-        
-}
+//    
+//            
+//            
+//            gamePanel.add(enemies);
+//            gamePanel.add(towers);
+//            
+//            
+//            
+//            this.add(gamePanel);
+//            
+//            
+//        }
+//        public void run(){
+//            
+//        }
+//       
+//        
+//}
