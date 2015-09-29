@@ -29,7 +29,7 @@ GameSidePanel side = new GameSidePanel();
         setLocationRelativeTo(null);
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBackground(Color.lightGray);
+        setBackground(Color.darkGray);
         init();
 
 
@@ -43,7 +43,7 @@ GameSidePanel side = new GameSidePanel();
     public void switchView(){
     setLayout(new BorderLayout());
     this.add(new_game, BorderLayout.CENTER);
-    this.add(side, BorderLayout.PAGE_END);
+    this.add(side, BorderLayout.EAST);
     first.setVisible(false);
     new_game.setVisible(true);
     side.setVisible(true);
