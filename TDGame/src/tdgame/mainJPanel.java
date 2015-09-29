@@ -73,6 +73,7 @@ class mainJPanel extends JPanel{
 //        buttonPanel.add(hardL);
         bottomPanel.add(hard);
         //*********************************** this code will read and write the high scores
+//<<<<<<< HEAD
 //BufferedReader br = null;
 //String highscorelist = "List of High scores.\n";
 //String HighScoresList = ""; 
@@ -100,6 +101,34 @@ class mainJPanel extends JPanel{
 //     {
 //         e.printStackTrace();  
 //     }
+//=======
+BufferedReader br = null;
+String highscorelist = "List of High scores.\n";
+String HighScoresList = ""; 
+     try{
+         
+         File file = new File("TDGameHighScore.txt");
+         //if the file doesnt exist , then create it
+         if(!file.exists())
+         {
+             file.createNewFile();
+         }
+               FileWriter fw = new FileWriter(file.getAbsoluteFile());
+        BufferedWriter bw = new BufferedWriter(fw);
+        br =  new BufferedReader(new FileReader("TDGameHighScore.txt"));
+        bw.write(highscorelist);
+         while ((highscorelist = br.readLine()) != null) 
+         {
+             HighScoresList =  highscorelist + "/n";// this will need to be sorted before it is output
+         }		
+
+   
+	bw.close();
+     } catch (IOException e)
+     {
+         e.printStackTrace();  
+     }
+//>>>>>>> origin/master
 //************************************************ this code will read and write high scores
 //        topPanel.add(namePanel);
         topPanel.add(bottomPanel);
