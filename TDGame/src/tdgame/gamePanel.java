@@ -8,10 +8,10 @@ package tdgame;
 import java.awt.*;
 import javax.swing.*;
 
-/**
- *
- * @author jakesemple
- */
+
+ 
+
+//int towerPlacement [][]={{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0}};
  class gamePanel extends JPanel {
              
     private JButton tile = new JButton("test");
@@ -24,38 +24,17 @@ import javax.swing.*;
 
 //            timer t1;
             
-            
+ int towerPlacement [][]={{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0}};
+      
+      public void  checkplacement()
+      {
+          
+      }
 
     public gamePanel() {
-       
-
-       
     }
 
  }
-            
+
            
-//for(int x = 0; x<10;x++)
-//{
-//    for(int y = 0; y<10; y++){
-//    g.drawRect(50 + (y* 50) , 50 + (y *50) , 50,50);
-//    }
-//}
-//    
-//            
-//            
-//            gamePanel.add(enemies);
-//            gamePanel.add(towers);
-//            
-//            
-//            
-//            this.add(gamePanel);
-//            
-//            
-//        }
-//        public void run(){
-//            
-//        }
-//       
-//        
-//}
+
