@@ -43,7 +43,7 @@ class mainJPanel extends JPanel{
     private JLabel hardL = new JLabel("Hard");
     private JLabel enterL = new JLabel("Enter");
    
-    
+    String highscorelist = "List of High scores.\n";
     
     mainJPanel(){
         setPreferredSize(new Dimension(800,600));
@@ -103,8 +103,8 @@ class mainJPanel extends JPanel{
 //     }
 //=======
 BufferedReader br = null;
-String highscorelist = "List of High scores.\n";
-String HighScoresList = ""; 
+
+
      try{
          
          File file = new File("TDGameHighScore.txt");
@@ -119,7 +119,7 @@ String HighScoresList = "";
         bw.write(highscorelist);
          while ((highscorelist = br.readLine()) != null) 
          {
-             HighScoresList =  highscorelist + "/n";// this will need to be sorted before it is output
+             highscorelist =  highscorelist + "/n";// this will need to be sorted before it is output
          }		
 
    
@@ -147,7 +147,7 @@ String HighScoresList = "";
         
         scores.setEditable(false);
         scores.setSize(5, 5);
-        scores.setText("High Scores will go here");
+        scores.setText("High Scores are/n "  + highscorelist);
         //scores.setText()
     }
        
