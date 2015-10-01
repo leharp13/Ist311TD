@@ -15,7 +15,7 @@ import javax.swing.*;
  class GameSidePanel extends JPanel implements Runnable{
     
     
-    private JButton nextWaveButton = new JButton("Next Wave");
+    private final JButton nextWaveButton = new JButton("Next Wave");
     private JButton homeWorkButton = new JButton(" HW ");
     private JButton eraserButton = new JButton("ERASER");
     private JButton footballButton = new JButton("FOOTBALL");
@@ -28,10 +28,25 @@ import javax.swing.*;
     private JLabel hwTitle = new JLabel("Homework Tosser");
     private JLabel eraseTitle = new JLabel("Eraser Cannon");
     private JLabel footballTitle = new JLabel("Paper FB");
+    private JScrollPane jScrollPane1 = new JScrollPane();
+    private JTextArea jTextArea1 = new JTextArea();
+    private JPanel jPanel2 = new JPanel();
+    private JPanel jPanel1 = new JPanel();
+    private JScrollPane jScrollPane2 = new JScrollPane();
+    private JTextArea jTextArea2 = new JTextArea();
+    private JPanel jPanel3 = new JPanel();
+    private JScrollPane jScrollPane3 = new JScrollPane();
+    private JTextArea jTextArea3 = new JTextArea();
+    private JPanel jPanel4 = new JPanel();
+    private JPanel jPanel5 = new JPanel();
+    private JScrollPane jScrollPane4 = new JScrollPane();
+    private JTextArea jTextArea4 = new JTextArea();
+    private JPanel jPanel6 = new JPanel();
+    private JPanel jPanel7 = new JPanel();
+//        nextWaveButton = newButton();
+    private JTextArea jTextArea5 = new JTextArea();
     
-    
-    
-//    JPanel gamePanel = new JPanel();
+
 
         GameSidePanel(){
 
@@ -45,24 +60,8 @@ import javax.swing.*;
 
   
 
-        JScrollPane jScrollPane1 = new JScrollPane();
-        JTextArea jTextArea1 = new JTextArea();
-        JPanel jPanel2 = new JPanel();
-        JPanel jPanel1 = new JPanel();
-     
-        JScrollPane jScrollPane2 = new JScrollPane();
-        JTextArea jTextArea2 = new JTextArea();
-        JPanel jPanel3 = new JPanel();
-        JScrollPane jScrollPane3 = new JScrollPane();
-        JTextArea jTextArea3 = new JTextArea();
-        JPanel jPanel4 = new JPanel();
-        JPanel jPanel5 = new JPanel();
-        JScrollPane jScrollPane4 = new JScrollPane();
-        JTextArea jTextArea4 = new JTextArea();
-        JPanel jPanel6 = new JPanel();
-        JPanel jPanel7 = new JPanel();
-//        nextWaveButton = newButton();
-        JTextArea jTextArea5 = new JTextArea();
+        
+        
 
 
 
@@ -332,24 +331,7 @@ import javax.swing.*;
 
 
 
-    private JPanel jPanel1;
-    private JPanel jPanel2;
-    private JPanel jPanel3;
-    private JPanel jPanel4;
-    private JPanel jPanel5;
-    private JPanel jPanel6;
-    private JPanel jPanel7;
-    private JScrollPane jScrollPane1;
-    private JScrollPane jScrollPane2;
-    private JScrollPane jScrollPane3;
-    private JScrollPane jScrollPane4;
-    private JScrollPane jScrollPane5;
-    private JTextArea jTextArea1;
-    private JTextArea jTextArea2;
-    private JTextArea jTextArea3;
-    private JTextArea jTextArea4;
-    private JTextArea jTextArea5;
-    // End of variables declaration                   
+                 
 
     public void run() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

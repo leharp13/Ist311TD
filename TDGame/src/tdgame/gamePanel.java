@@ -24,6 +24,14 @@ import javax.swing.*;
 
 //            timer t1;
             
+         public void paintComponent(Graphics g)
+         {
+             super.paintComponent(g);
+             Image myImage = Toolkit.getDefaultToolkit().getImage("bg.png");
+             g.drawImage(myImage, 0, 0, this);
+             
+             
+         }
         int towerPlacement [][]={{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                                  {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                                  {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
