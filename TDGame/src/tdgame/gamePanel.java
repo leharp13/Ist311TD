@@ -48,24 +48,30 @@ import javax.swing.*;
       public void  checkplacement(int X, int Y) //X,Y are the possition in which the user clicks to place a tower 
 
       {
+          try
+          {
           for(int x=0; x<10;x++)
           {
               for(int y=0; y<10;y++)
               {
                   if(towerPlacement [x][y] ==0) 
                   {
+
+                      towerPlacement[x][y] =2;
+
+                  }
+                  else if (towerPlacement [x][y] ==1 || towerPlacement [x][y] == 2)
+                  {
                       
-                     // if(towerPlacement[x][y]=towerPlacement[0][0])
-                      //{
-                          //allow the player to place the tower
-                     // }
-                      //else 
-                      {
-                          //do not allow the player to place the tower
+                      throw new Exception();
                       }
-                          
                   }
               }
+          }
+          catch(Exception e)
+          {
+              System.out.println("you can not place a tower there");
+              JOptionPane.showMessageDialog(null, "you can not place a tower in this location", "improper location",JOptionPane.WARNING_MESSAGE); 
           }
       }
        
