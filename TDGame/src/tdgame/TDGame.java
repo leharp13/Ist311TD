@@ -18,13 +18,10 @@ public class TDGame {
        myJFrame theFrame = new myJFrame();
        mainJPanel menu = new mainJPanel();
        menu theMenu = new menu();
-//       gamePanel new_game = new gamePanel();
+
        menuController cont = new menuController(theFrame, theMenu);
        menu.setVisible(true);
-//       new_game.setVisible(false);
-       
-//       gameView game = new gameView();
-//       game.setVisible(true);
+
        
       
     }

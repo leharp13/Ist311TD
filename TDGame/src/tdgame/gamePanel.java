@@ -6,40 +6,58 @@
 package tdgame;
 
 import java.awt.*;
+import java.awt.image.CropImageFilter;
+import java.awt.image.FilteredImageSource;
 import javax.swing.*;
+import java.io.*;
 
 
  
 
 //int towerPlacement [][]={{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0}};
  class gamePanel extends JPanel {
-             
-    private JButton tile = new JButton("test");
-    private JButton takenTile = new JButton();
+    
     private Enemy enemies = new Enemy();
     private Towers towers = new Towers();
     
     JPanel gamePanel = new JPanel();
-
-
-//            timer t1;
-            
+         public static Image[] tileset_ground = new Image[100];
          public void paintComponent(Graphics g)
          {
              super.paintComponent(g);
-             Image myImage = Toolkit.getDefaultToolkit().getImage("bg.png");
-             g.drawImage(myImage, 0, 0, this);
-             
-             
+             Image myImage = Toolkit.getDefaultToolkit().getImage("");
+             g.drawImage(myImage, 0, 0, this);  
+             room.draw(g);
          }
+         
+         public static Room room;
+         public static Save save;
+         
+         public void define() {
+             room = new Room();
+             save = new Save();
+             
+             for(int i = 0; i<tileset_ground.length;i++){
+                 tileset_ground[i] = new ImageIcon("res/tileset_ground.png").getImage();
+//                 tileset_ground[i] = createImage(new FilteredImageSource(tileset_ground[i].getSource(), new CropImageFilter(0, 26*i, 26, 26)));
+             }
+             save.loadSave(new File("save/maplayout.txt"));
+         }
+         
+         public gamePanel() {
+         
+           define();
+           
+    }  
+         
         int towerPlacement [][]={{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                                {1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                                {1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                                {1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                                {0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1},
+                                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                                 {1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                                 {1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                                 {1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                                 {0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1},
                                 {0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1},
                                 {0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0},
                                 {0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0},
@@ -88,25 +106,12 @@ import javax.swing.*;
       }
        
 
-    public gamePanel() {
-    }
+
+
+    
 
  }
+ 
 
-          // when next round button is clicked 
-        //spawn 10 enemies + 2* the round number at [5][1]
-     // while enemies are visible
-// move the first enemy until [6][5]with a half second delay
-// move the rest of the enemys 
-//when position hits [5][5]  move  to [20][5]
-//when position hits [20][4] move to [20][10]
-//when position hits [20][10] move to [14][10]
-//when position hits [14][10] move to [14][16]
-//when position hits [14][16] move to [7][16]
-//when position hits [7][16] move to [7][19]
-//when position hits [7][19] set enemies to invisible and decrease lives by each enemy
-
-
-//
-
+           
 

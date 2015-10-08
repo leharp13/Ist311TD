@@ -4,16 +4,9 @@
 
 package tdgame;
 
-import java.awt.BorderLayout;
+
 
 public class menu {
-    public String easy = "easy";
-    public String medium = "medium";
-    public String hard = "Hard";
-    public String getinstr = "instructions";
-    public String getname = "name";
-    public String getHigh = "high score";
-
 
     
     public void startEasy()

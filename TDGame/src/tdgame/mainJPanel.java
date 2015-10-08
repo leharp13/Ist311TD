@@ -66,68 +66,12 @@ class mainJPanel extends JPanel{
         add(scores);
         bottomPanel.add(enterName);
              bottomPanel.add(input);
-//        buttonPanel.add(easyL);
         bottomPanel.add(easy);
-//        buttonPanel.add(mediumL);
         bottomPanel.add(medium);
-//        buttonPanel.add(hardL);
         bottomPanel.add(hard);
-        //*********************************** this code will read and write the high scores
-//<<<<<<< HEAD
-//BufferedReader br = null;
-//String highscorelist = "List of High scores.\n";
-//String HighScoresList = ""; 
-//     try{
-//         
-//         File file = new File("TDGameHighScore.txt");
-//         //if the file doesnt exist , then create it
-//         if(!file.exists())
-//         {
-//             file.createNewFile();
-//         }
-//       
-//         while ((highscorelist = br.readLine()) != null) 
-//         {
-//             HighScoresList =  highscorelist + "/n";// this will need to be sorted before it is output
-//         }		
-//         
-//        FileWriter fw = new FileWriter(file.getAbsoluteFile());
-//        BufferedWriter bw = new BufferedWriter(fw);
-//        br =  new BufferedReader(new FileReader("TDGameHighScore.txt"));
-//        bw.write(highscorelist);
-//   
-//	bw.close();
-//     } catch (IOException e)
-//     {
-//         e.printStackTrace();  
-//     }
-//=======
-BufferedReader br = null;
 
 
-     try{
-         
-         File file = new File("TDGameHighScore.txt");
-         //if the file doesnt exist , then create it
-         if(!file.exists())
-         {
-             file.createNewFile();
-         }
-               FileWriter fw = new FileWriter(file.getAbsoluteFile());
-        BufferedWriter bw = new BufferedWriter(fw);
-        br =  new BufferedReader(new FileReader("TDGameHighScore.txt"));
-        bw.write(highscorelist);
-         while ((highscorelist = br.readLine()) != null) 
-         {
-             highscorelist =  highscorelist + "/n";// this will need to be sorted before it is output
-         }		
 
-   
-	bw.close();
-     } catch (IOException e)
-     {
-         e.printStackTrace();  
-     }
 //>>>>>>> origin/master
 //************************************************ this code will read and write high scores
 //        topPanel.add(namePanel);
@@ -168,8 +112,37 @@ BufferedReader br = null;
         hard.addActionListener(listener);
     }
    
+   public void saveFile(){
+       
+   BufferedReader br = null;
     
-    
+     try{
+         
+         File file = new File("TDGameHighScore.txt");
+         //if the file doesnt exist , then create it
+         if(!file.exists())
+         {
+             file.createNewFile();
+         }
+               FileWriter fw = new FileWriter(file.getAbsoluteFile());
+        BufferedWriter bw = new BufferedWriter(fw);
+        br =  new BufferedReader(new FileReader("TDGameHighScore.txt"));
+        bw.write(highscorelist);
+         while ((highscorelist = br.readLine()) != null) 
+         {
+             highscorelist =  highscorelist + "/n";// this will need to be sorted before it is output
+         }		
+
+   
+	bw.close();
+     } catch (IOException e)
+     {
+         e.printStackTrace();  
+     }
 }
+}
+ 
+    
+
 
 
