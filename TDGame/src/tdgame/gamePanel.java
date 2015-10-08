@@ -105,8 +105,9 @@ import javax.swing.*;
 //when position hits [14][16] move to [7][16]
 //when position hits [7][16] move to [7][19]
 //when position hits [7][19] set enemies to invisible and decrease lives by each enemy
-
-
+//1,,18
 //
+
+
 
 
